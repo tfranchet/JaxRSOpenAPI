@@ -3,6 +3,8 @@ package fr.istic.taa.jaxrs;
 import io.undertow.Undertow;
 import org.jboss.resteasy.plugins.server.undertow.UndertowJaxrsServer;
 
+import fr.istic.taa.jaxrs.dao.generic.EntityManagerHelper;
+
 import java.util.logging.Logger;
 
 /**
@@ -16,7 +18,6 @@ public class RestServer {
     public static void main( String[] args ) {
 
         UndertowJaxrsServer ut = new UndertowJaxrsServer();
-
         TestApplication ta = new TestApplication();
 
         ut.deploy(ta);
